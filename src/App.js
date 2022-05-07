@@ -8,16 +8,15 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rooms/" element={<Rooms />} />
         <Route path="/rooms/:slug" element={<SingleRoom />} />
-        <Route  element={<Error/>} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
